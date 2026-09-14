@@ -1,0 +1,11 @@
+# Publish only these reviewed site files. Keep the editing project elsewhere.
+*
+!/.gitignore
+!/.gitattributes
+!/.nojekyll
+!/README.md
+!/index.html
+!/snapshot.3c7bc78effcef9bf75b9830a98d02a09fb33b0b63f2b1883ea21f676b0152cd1.json
+!/sample-data/
+/sample-data/*
+!/sample-data/harborline_inventory_demo.xlsx
