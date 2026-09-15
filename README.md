@@ -4,14 +4,14 @@ An interactive inventory dashboard for **Harborline Business Supplies**, a ficti
 
 **[Open the dashboard](https://goldendelibird0.github.io/thrucloud-sample-dashboard/?view=1&tab=dashboard)**
 
-Explore inventory value, stock availability, replenishment priorities, product records, and outstanding purchase orders. Category and location filters work across the dashboard.
+Explore inventory value, stock availability, replenishment priorities, near-expiration and expired stock, product records, and outstanding purchase orders. Category and location filters work across the dashboard.
 
-The demonstration contains 1,000 products, 15,586 stock movements, and 96 open purchase orders. The snapshot is September 11, 2026, with 90 days of history. All company details and records are fictional. The dashboard does not place orders or synchronize with Excel.
+The demonstration contains 1,000 products, 15,586 stock movements, and 96 open purchase orders. The snapshot is September 11, 2026, with 90 days of history. All company details and records are fictional. The dashboard does not place orders or synchronize with Excel. Selected cleaning products have fictional expiry dates, with one date for all current stock of each product. Near expiration means 0–30 days after the snapshot; already-expired stock is shown separately. Needs attention counts each product once, even when purchasing and expiry issues overlap.
 
 **[Download the sample workbook](sample-data/harborline_inventory_demo.xlsx)**
 
 ## Publication files
 
-This repository contains the finished static site and sample workbook. `index.html` includes the browser application and its sample data. The `snapshot.*.json` file supports previously cached versions of the dashboard.
+This repository contains the finished static site and sample workbook. `index.html` includes the browser application and its sample data. The `snapshot.*.json` file contains the matching reviewed sample dataset; its filename includes the data checksum.
 
 GitHub Pages serves the repository root on `main`. Editing tools, source projects, build scripts, and internal documentation are kept outside this publication repository. The ignore file allows only the intended publication files.
