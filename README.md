@@ -2,16 +2,22 @@
 
 An interactive inventory dashboard for **Harborline Business Supplies**, a fictional office, packaging and cleaning supplies company.
 
-**[Open the dashboard](https://goldendelibird0.github.io/thrucloud-sample-dashboard/?view=1&tab=dashboard)**
+**[Open the dashboard](https://goldendelibird0.github.io/thrucloud-sample-dashboard/?view=1&tab=dashboard)** · **[Open the Google Sheet](https://docs.google.com/spreadsheets/d/1YYowE_I_Cz20txaiCMt6YhfIQAStdb-3h43yDRKPvno/edit)**
 
-Explore inventory value, stock availability, replenishment priorities, near-expiration and expired stock, product records, and outstanding purchase orders. Category and location filters work across the dashboard.
+The Google Sheet powers the inventory, stock history, purchase orders and expiry worklists. The dashboard reads all three tabs on opening and when you select **Refresh**. The source link and last successful sync appear above the dashboard. If a refresh fails, the previous valid data stays visible with an explanation; the first load has a saved demo fallback.
 
-The demonstration contains 1,000 products, 15,586 stock movements, and 96 open purchase orders. The snapshot is September 11, 2026, with 90 days of history. All company details and records are fictional. The dashboard does not place orders or synchronize with Excel. Selected cleaning products have fictional expiry dates, with one date for all current stock of each product. Near expiration means 0–30 days after the snapshot; already-expired stock is shown separately. Needs attention counts each product once, even when purchasing and expiry issues overlap.
+## Editing the demo
 
-**[Download the sample workbook](sample-data/harborline_inventory_demo.xlsx)**
+- Edit the Sheet in its owner account. Public visitors have read-only access.
+- Keep the three tab names and row 5 headers unchanged. Product IDs link the tabs.
+- Edit product inputs, expiry dates, movement records and open orders. The dashboard recalculates values, stock status and action lists.
+- Quantity must equal Opening Quantity + Receipts − Sales for each product. Update the stock quantity and matching movement together.
+- This remains a fixed demonstration as of **September 11, 2026**, with history from June 14. Expiry and order deadlines use that snapshot date, not the sync time. It is not a rolling live inventory system.
+
+The starting sample has 1,000 products, 15,586 movements and 96 open orders. Selected cleaning products have expiry dates; one date represents all current units of a product. Near expiration means 0–30 days from the snapshot, with expired stock shown separately. Needs attention counts a product once even when issues overlap. All company details and records are fictional.
+
+**[Download the original sample workbook](sample-data/harborline_inventory_demo.xlsx)** — a saved baseline; later Google Sheet edits do not update this download.
 
 ## Publication files
 
-This repository contains the finished static site and sample workbook. `index.html` includes the browser application and its sample data. The `snapshot.*.json` file contains the matching reviewed sample dataset; its filename includes the data checksum.
-
-GitHub Pages serves the repository root on `main`. Editing tools, source projects, build scripts, and internal documentation are kept outside this publication repository. The ignore file allows only the intended publication files.
+This repository contains only the finished static site, the saved fallback dataset and the sample workbook. GitHub Pages serves the repository root on main. Editing projects, build scripts, internal documentation and runtime source files are kept outside this publication repository.
